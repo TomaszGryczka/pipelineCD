@@ -20,8 +20,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '17'
-      - if: github.event.release
-        name: Update version in pom.xml (Release only)
+      - name: Update version in pom.xml (Release only)
         run: mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }}
 
       - name: Build with Maven
