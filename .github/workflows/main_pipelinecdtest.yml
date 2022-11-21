@@ -50,4 +50,4 @@ jobs:
           app-name: 'pipelinecdtest'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84933A449C92414587916239B9EAEF1A }}
-          package: '*.war'
+          package: '*.jar'
